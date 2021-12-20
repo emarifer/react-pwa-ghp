@@ -29,7 +29,7 @@ export const Navigation = () => (
 							to="/users"
 							className={({ isActive }) => (isActive ? 'nav-active' : '')}
 						>
-							Users & Friends
+							Users & Guests
 						</NavLink>
 					</li>
 				</ul>
