@@ -18,7 +18,6 @@ export default defineConfig({
 			includeAssets: [
 				'img/favicon.svg',
 				'img/logo.svg',
-				'img/loading.gif',
 				'robots.txt',
 				'icons/apple-touch-icon.png',
 				'icons/android-chrome-192x192.png',
