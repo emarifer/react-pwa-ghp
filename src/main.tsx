@@ -35,6 +35,9 @@ ReactDOM.render(
  * https://github.com/antfu/vite-plugin-pwa/issues/156#issuecomment-970165872
  * https://vite-plugin-pwa.netlify.app/guide/prompt-for-update.html
  *
+ * Errores IDE 'No se puede encontrar el módulo' (ts2307). CONFIGURACION RECOMENDABLE:
+ * https://vite-plugin-pwa.netlify.app/guide/faq.html#ide-errors-cannot-find-module-ts2307
+ *
  * PAR EL ERROR DE TYPES SE BUSCO «CANNOT FIND MODULE 'VIRTUAL:PWA-REGISTER' OR ITS CORRESPONDING TYPE DECLARATIONS».
  * PROPORCIONAR TIPOS PARA LAS FUNCIONES DEL CLIENTE DEL MÓDULO 'virtual:pwa-register':
  * https://githubmemory.com/repo/antfu/vite-plugin-pwa/issues/40

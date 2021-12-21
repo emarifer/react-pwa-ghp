@@ -29,14 +29,14 @@ export const Navigation = () => (
 							to="/users"
 							className={({ isActive }) => (isActive ? 'nav-active' : '')}
 						>
-							Only Developers
+							Developers
 						</NavLink>
 					</li>
 				</ul>
 			</nav>
 
 			<Routes>
-				<Route path="users" element={<h1>Users Page</h1>} />
+				<Route path="developers" element={<h1>Developers Page</h1>} />
 				<Route path="about" element={<h1>About Page</h1>} />
 				<Route path="/" element={<h1>Home Page</h1>} />
 				<Route path="/*" element={<Navigate to="/" replace />} />
