@@ -47,6 +47,12 @@ ReactDOM.render(
  * GIT CLONE BRANCH: CÓMO CLONAR UNA RAMA ESPECÍFICA:
  * https://www.freecodecamp.org/news/git-clone-branch-how-to-clone-a-specific-branch/
  *
+ * Git Delete Branch – How to Remove a Local or Remote Branch:
+ * https://www.freecodecamp.org/news/git-delete-branch-how-to-remove-a-local-or-remote-branch/
+ *
+ * Bash: duplicar + renombrar carpeta:
+ * https://stackoverflow.com/questions/33343840/bash-duplicate-rename-folder#33366590
+ *
  * SOBRE EL USO DE LA BIBLIOTECA SWEETALERT:
  * https://sweetalert2.github.io/
  */
