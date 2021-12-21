@@ -26,7 +26,7 @@ export const Navigation = () => (
 					</li>
 					<li>
 						<NavLink
-							to="/users"
+							to="/developers"
 							className={({ isActive }) => (isActive ? 'nav-active' : '')}
 						>
 							Developers
