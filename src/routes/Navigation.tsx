@@ -3,7 +3,7 @@ import { Routes, Route, NavLink, Navigate } from 'react-router-dom';
 import Logo from '/img/logo.svg';
 
 export const Navigation = () => (
-	<BrowserRouter basename="/test-pwa-react-ghpages">
+	<BrowserRouter basename={`/${import.meta.env.BASE_URL}`}>
 		<div className="main-layout">
 			<nav>
 				<img src={Logo} alt="React Logo" />
