@@ -22,9 +22,9 @@ export default ({ mode }) => {
 					'icons/android-chrome-512x512.png',
 				],
 				manifest: {
-					name: 'test-pwa-react-ghpages',
-					short_name: 'test-pwa-react-ghpages',
-					description: 'test-pwa-react-ghpages',
+					name: 'react-pwa-ghp',
+					short_name: 'react-pwa-ghp',
+					description: 'react-pwa-ghp',
 					theme_color: '#2377ff',
 					background_color: '#2377ff',
 					icons: [
