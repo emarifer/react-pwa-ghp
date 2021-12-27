@@ -1,37 +1,64 @@
 import { BrowserRouter } from 'react-router-dom';
 import { Routes, Route, NavLink, Navigate } from 'react-router-dom';
+import { css } from '@emotion/react';
+import styled from '@emotion/styled';
 import Logo from '/img/logo.svg';
+
+const customNavLink = css`
+	color: #e28d2b;
+	font-size: 1.2rem;
+	text-decoration: none;
+`;
+
+const CustomElement = styled.li`
+	list-style: none;
+	margin-bottom: 10px;
+
+	a {
+		${customNavLink}
+	}
+`;
+
+const MainLayout = styled.div`
+	display: flex;
+	flex-direction: row;
+`;
+
+const activeLink = {
+	borderBottom: '3px solid blueviolet',
+	transition: 'all 1.5s ease-out',
+};
 
 export const Navigation = () => (
 	<BrowserRouter basename={`/${import.meta.env.BASE_URL}`}>
-		<div className="main-layout">
+		<MainLayout>
 			<nav>
 				<img src={Logo} alt="React Logo" />
 				<ul>
-					<li>
+					<CustomElement>
 						<NavLink
 							to="/"
-							className={({ isActive }) => (isActive ? 'nav-active' : '')}
+							style={({ isActive }) => (isActive ? activeLink : {})}
 						>
 							Home
 						</NavLink>
-					</li>
-					<li>
+					</CustomElement>
+					<CustomElement>
 						<NavLink
 							to="/about"
-							className={({ isActive }) => (isActive ? 'nav-active' : '')}
+							style={({ isActive }) => (isActive ? activeLink : {})}
 						>
 							About
 						</NavLink>
-					</li>
-					<li>
+					</CustomElement>
+					<CustomElement>
 						<NavLink
 							to="/developers"
-							className={({ isActive }) => (isActive ? 'nav-active' : '')}
+							style={({ isActive }) => (isActive ? activeLink : {})}
 						>
 							Developers
 						</NavLink>
-					</li>
+					</CustomElement>
 				</ul>
 			</nav>
 
@@ -41,6 +68,11 @@ export const Navigation = () => (
 				<Route path="/" element={<h1>Home Page</h1>} />
 				<Route path="/*" element={<Navigate to="/" replace />} />
 			</Routes>
-		</div>
+		</MainLayout>
 	</BrowserRouter>
 );
+
+/**
+ * ACTIVE INLINE NAVLINK STYLES WITH REACT ROUTER:
+ * https://ultimatecourses.com/blog/active-navlink-inline-styles-with-react-router
+ */
