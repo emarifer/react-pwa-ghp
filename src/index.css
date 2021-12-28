@@ -25,14 +25,15 @@ nav {
 	height: 100vh;
 	margin-right: 15px;
 	/* overflow-y: scroll; */
-	text-align: center;
+	/* text-align: left; */
+	padding-left: 1.5rem;
 	width: 250px;
 }
 nav ul {
-	align-items: center;
+	/* align-items: center;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: left; */
 	padding-left: 0;
 }
 

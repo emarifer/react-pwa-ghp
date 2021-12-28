@@ -5,14 +5,17 @@ import styled from '@emotion/styled';
 import Logo from '/img/logo.svg';
 
 const customNavLink = css`
-	color: #e28d2b;
-	font-size: 1.2rem;
+	color: white;
+	font-size: 1.5rem;
 	text-decoration: none;
+	text-transform: uppercase;
+	padding-bottom: 3px;
+	border-bottom: 3px solid transparent;
 `;
 
 const CustomElement = styled.li`
 	list-style: none;
-	margin-bottom: 10px;
+	margin: 1rem;
 
 	a {
 		${customNavLink}
@@ -25,8 +28,9 @@ const MainLayout = styled.div`
 `;
 
 const activeLink = {
-	borderBottom: '3px solid blueviolet',
-	transition: 'all 1.5s ease-out',
+	color: '#01cfa9',
+	borderBottom: '3px solid #01cfa9',
+	transition: 'all .8s ease-in-out',
 };
 
 export const Navigation = () => (
