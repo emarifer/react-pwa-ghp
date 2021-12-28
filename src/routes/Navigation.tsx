@@ -1,5 +1,6 @@
-import { BrowserRouter } from 'react-router-dom';
-import { Routes, Route, NavLink, Navigate } from 'react-router-dom';
+// import { BrowserRouter } from 'react-router-dom';
+// import { Routes, Route, NavLink, Navigate } from 'react-router-dom';
+import { Router, Route, Link } from 'wouter';
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import Logo from '/img/logo.svg';
@@ -27,53 +28,35 @@ const MainLayout = styled.div`
 	flex-direction: row;
 `;
 
-const activeLink = {
-	color: '#01cfa9',
-	borderBottom: '3px solid #01cfa9',
-	transition: 'all .8s ease-in-out',
-};
+// const activeLink = {
+// 	color: '#01cfa9',
+// 	borderBottom: '3px solid #01cfa9',
+// 	transition: 'all .8s ease-in-out',
+// };
 
 export const Navigation = () => (
-	<BrowserRouter basename={`/${import.meta.env.BASE_URL}`}>
+	<Router base={`${import.meta.env.BASE_URL}`}>
 		<MainLayout>
 			<nav>
 				<img src={Logo} alt="React Logo" />
 				<ul>
 					<CustomElement>
-						<NavLink
-							to="/"
-							style={({ isActive }) => (isActive ? activeLink : {})}
-						>
-							Home
-						</NavLink>
+						<Link href=".">Home</Link>
 					</CustomElement>
 					<CustomElement>
-						<NavLink
-							to="/about"
-							style={({ isActive }) => (isActive ? activeLink : {})}
-						>
-							About
-						</NavLink>
+						<Link href="about">About</Link>
 					</CustomElement>
 					<CustomElement>
-						<NavLink
-							to="/developers"
-							style={({ isActive }) => (isActive ? activeLink : {})}
-						>
-							Developers
-						</NavLink>
+						<Link href="developers">Developers</Link>
 					</CustomElement>
 				</ul>
 			</nav>
 
-			<Routes>
-				<Route path="developers" element={<h1>Developers Page</h1>} />
-				<Route path="about" element={<h1>About Page</h1>} />
-				<Route path="/" element={<h1>Home Page</h1>} />
-				<Route path="/*" element={<Navigate to="/" replace />} />
-			</Routes>
+			<Route path="developers" component={() => <h1>Developers Page</h1>} />
+			<Route path="about" component={() => <h1>About Page</h1>} />
+			<Route path="/" component={() => <h1>Home Page</h1>} />
 		</MainLayout>
-	</BrowserRouter>
+	</Router>
 );
 
 /**
