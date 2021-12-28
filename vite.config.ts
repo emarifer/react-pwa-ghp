@@ -8,7 +8,7 @@ export default ({ mode }) => {
 	Object.assign(process.env, loadEnv(mode, process.cwd(), ''));
 
 	return defineConfig({
-		base: `/${process.env.BASE_URL}/`,
+		base: `/${process.env.BASE_URL || ''}/`,
 		plugins: [
 			react(),
 			VitePWA({
