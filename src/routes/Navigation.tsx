@@ -1,4 +1,4 @@
-import { Router, Route } from 'wouter';
+import { Router, Route, Switch, Redirect } from 'wouter';
 import styled from '@emotion/styled';
 import Logo from '/img/logo.svg';
 import { NavLink } from '../components/NavLink';
@@ -30,10 +30,14 @@ export const Navigation = () => (
 					</CustomElement>
 				</ul>
 			</nav>
-
-			<Route path="" component={() => <h1>Home Page</h1>} />
-			<Route path="about" component={() => <h1>About Page</h1>} />
-			<Route path="developers" component={() => <h1>Developers Page</h1>} />
+			<Switch>
+				<Route path="/" component={() => <h1>Home Page</h1>} />
+				<Route path="about" component={() => <h1>About Page</h1>} />
+				<Route path="developers" component={() => <h1>Developers Page</h1>} />
+				<Route>
+					<Redirect to="." />
+				</Route>
+			</Switch>
 		</MainLayout>
 	</Router>
 );

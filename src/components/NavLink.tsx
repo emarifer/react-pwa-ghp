@@ -26,7 +26,7 @@ const NavLinkStyled = styled(Link)`
 		position: absolute;
 		bottom: -8px;
 		left: 0;
-		transform: translateX(150px);
+		transform: translateX(30vw);
 		transition: all 0.3s ease-in-out;
 	}
 `;
